@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Sans');
+
+/* Estilo del cuerpo de la página */
+body {
+    background-color: #e4e4e4;
+    overflow-x: hidden;
+    overflow-y:auto;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+/* Estilos - HOME */
+
+/* Estilos del contenido del banner */
+#banner {
+    background-color: #116434;
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+/* Logo */
+.mainlogo {
+    height: 58px;
+    position: absolute;
+    top: 8px;
+    left: 28px;
+}
+
+/* Estilo de lista ordenada con el menú de navegación */
+.lista {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    position: absolute;
+    top:  -18px;
+    left: 300px;
+    padding-right: auto;
+}
+
+/* Estilo de los elementos de la lista */
+.opcion {
+    padding: 9px 25px 8px 25px;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;    
+}
+
+
+/* Estilos de vínculos */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+a.active {
+    text-decoration: underline;
+  }
+
+
+/* Efectos hover de los elementos de la lista */
+.opcion:hover {
+    background-color: #307a4f;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+.dropdown-menu {
+    list-style-type: none;
+    display: none;
+}
+
+.opcion.dropdown:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 67px;
+    left: 129px;
+    background-color: #307a4f;
+    padding: 10px;
+    width: 156px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+
+  
+/* Estilo del dropdown cuando se muestra */
+.opcion.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilo de los elementos del dropdown */
+.dropdown-menu li {
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
+
+}
+
+
+/* Efectos hover de los elementos del dropdown */
+.dropdown-menu li:hover {
+    background-color: #448b62;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+
+
+
+/* Estilo del search box del banner */
+#search-box {
+    background-color: #ffffff;
+    font-family: "DM Sans";
+    color: #000000;
+    width: 170px;
+    border: 0px;
+    padding: 5px;
+    padding-left: 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    position: absolute;
+    top:  18px;
+    left: 1150px;
+}
+
+
+.instagram {
+    height: 18px;
+    position: absolute;
+    top: 24px;
+    left: 1080px;
+}
+
+
+.twitter {
+    height: 17px;
+    position: absolute;
+    top: 24px;
+    left: 1115px;
+}
+
+
+.bienvenida {
+    font-family: "DM Sans";
+    font-size: large;
+    position: absolute;
+    top: 79px;
+    left: 40px;
+}
+
+.resaltado {
+    font-weight: bold;
+    color: #0e4e29;
+}
+
+
+
+
+.noticia_1 {
+    width: 95%;
+    height: 314px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 155px;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+
+
+.noticia_2 {
+    width: 95%;
+    height: 314px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 155px;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+
+
+.noticia_3 {
+    width: 95%;
+    height: 314px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 155px;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+
+iframe {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+/* Estilos contenedor 1 - Lionel Messi */
+.t_messi {
+    font-family: "DM Sans";
+    color: #06182F;
+    position:absolute;
+    top:97px;
+    left: 585px;
+    z-index: 9998;
+    
+}
+
+.p_messi {
+    font-family: "DM Sans";
+    font-size: larger;
+    color: #06182F;
+    position:absolute;
+    top:190px;
+    left: 585px;
+    z-index: 9998;
+}
+
+.cortesia1 {
+    font-family: "DM Sans";
+    font-size: small;
+    color: #06182F;
+    position:absolute;
+    top:260px;
+    left: 585px;
+    z-index: 9998;
+}
+
+
+/* Estilos contenedor 2 - Shohei Ohtani */
+.t_ohtani {
+    font-family: "DM Sans";
+    color: #06182F;
+    position:absolute;
+    top:93px;
+    left: 585px;
+    z-index: 9998;
+    
+}
+
+.p_ohtani {
+    font-family: "DM Sans";
+    font-size: larger;
+    color: #06182F;
+    position:absolute;
+    top:190px;
+    left: 585px;
+    z-index: 9998;
+}
+
+.cortesia2 {
+    font-family: "DM Sans";
+    font-size: small;
+    color: #06182F;
+    position:absolute;
+    top:260px;
+    left: 585px;
+    z-index: 9998;
+}
+
+
+/* Estilos contenedor 3 - Michael Jordan */
+.t_jordan {
+    font-family: "DM Sans";
+    color: #06182F;
+    position:absolute;
+    top:100px;
+    left: 585px;
+    z-index: 9998;
+    
+}
+
+.p_jordan {
+    font-family: "DM Sans";
+    font-size: larger;
+    color: #06182F;
+    position:absolute;
+    top:190px;
+    left: 585px;
+    z-index: 9998;
+}
+
+.cortesia3 {
+    font-family: "DM Sans";
+    font-size: small;
+    color: #06182F;
+    position:absolute;
+    top:260px;
+    left: 585px;
+    z-index: 9998;
+}
