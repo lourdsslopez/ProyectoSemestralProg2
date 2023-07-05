@@ -8,30 +8,64 @@
 
 </head>
 <body>
-    <div id="banner">
-        <img class="mainlogo" src="images\logotitulow.png">
+    <header>
+        <div id="banner">
+                <img class="mainlogo" src="images\logotitulow.png">
+    
+            <ul class="lista">
+                <li class="opcion"><a class="active" href="home.html">
+                    Inicio</a></li>
+                <li class="opcion dropdown">
+                    <a>Registro a cursos</a>
+                    <ul class="dropdown-menu">
+                        <a href="ciencias.html"><li>Ciencias Naturales</li></a>
+                        <a href="quimicabiologia.html"><li>Química y Biología</li></a>
+                        <a href="programacion.html"><li>Programación</li></a>
+                    </ul> 
+                </li>
+                <li class="opcion"><a href="referencias.html">Referencias</a></li>
+                <li class="opcion"><a href="contactanos.html">Contáctanos</a></li>
+            </ul>
+    
+            <a href="https://instagram.com/solociencia_com?igshid=OGQ5ZDc2ODk2ZA=="><img class="instagram" src="images\instagram.png"></a>
+    
+    
+            <a href="https://twitter.com/solociencia_com?s=21&t=_6ZvcTnzQaqWVP_-1llbnA"><img class="twitter" src="images\twitter.png"></a>
+    
+    
+            <span> 
+                <form action="https://www.google.com/search" method="get">
+                    <input type="text" name="q" id="search-box"  placeholder="Buscar">
+                    <button type="submit"><img class="buscar" src="images/search.png"></button>
+                </form>
+            </span>
+    
+        </div>
+    </header>
 
-    <ul class="lista">
-        <li class="opcion"><a href="home.html">
-            Inicio</a></li>
-        <li class="opcion dropdown">
-            <a class="active">Registro a cursos</a>
-            <!-- <ul class="dropdown-menu">
-                <li><a href="ciencias.html">Ciencias Naturales</a></li>
-                <li><a href="quimicabiologia.html">Química y Biología</a></li>
-                <li><a href="programacion.html">Programación</a></li>
-            </ul> -->
-        </li>
-        <li class="opcion"><a href="referencias.html">Referencias</a></li>
-        <li class="opcion"><a href="contactanos.html">Contáctanos</a></li>
-    </ul>
 
-    <span> 
-        <input type="text" id="search-box" placeholder="Buscar">
-    </span>
-
-</div>
-
+<div id="bgcien">
+    <div id="formcont">
+        <title class="t_curso"> Registro Curso Ciencias Naturales</title>
+        <form action="ciencias.jsp">
+            <label class="nombrereg"  for="nombre" >Nombre:</label>
+            <input class="nombrebar" type="text" id="nombre" name="nombre" required><br><br>
+        
+            <label class="cedulareg" for="cedula">Cédula:</label>
+            <input class="cedulabar" type="cedula" id="cedula" name="cedula" required><br><br>
+        
+            <label class="horarioreg" for="horario">Elige la fecha de inicio del curso:</label>
+            <select class="horariobar" id="horario" name="horario" required>
+              <option value="">Selecciona una opción</option>
+              <option value="julio">20 de julio</option>
+              <option value="octubre">24 de octubre</option>
+              <option value="noviembre">14 de noviembre</option>
+            </select><br><br>
+        
+            <input class="boton_curso" type="submit" value="Inscribirse"> 
+        </form>
+        <h1 class="volverh"><a href="home.html">Volver a Inicio</a></h1>
+    </div>
 
 </body>
 </html>
