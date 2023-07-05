@@ -9,6 +9,29 @@ body {
     font-weight: 400;
 }
 
+/* Estilos - LOGIN */
+
+
+
+.login {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0%;
+    left: 40%;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Estilos - HOME */
 
@@ -502,4 +525,159 @@ iframe {
 
 .listamenu {
     list-style-type: none;
+}
+
+
+
+
+
+
+
+/*Estilo de fondo de página de registro*/
+#bgprog{
+    width: 1440px;
+height: 941px;
+flex-shrink: 0;
+background-image: url('images/programacion1.jpg');
+}
+
+/*Contenedor de formulario*/
+#formcont{
+width: 728px;
+height: 773px;
+flex-shrink: 0;
+border-radius: 20px;
+background: rgba(217, 217, 217, 0.90);
+position: absolute;
+    top:  150px;
+    left: 350px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+/*Estilo para título de formulario*/
+.t_curso{
+    font-family: "DM Sans";
+    display: flex;
+position: absolute;
+top: 50px;
+left: 150px;
+color: #0e4e29;
+font-size:xx-large;
+}
+
+/*Estilo para los label de formulario*/
+.nombrereg {
+    color: rgba(0, 0, 0, 0.884);
+font-family: "DM Sans";
+display: flex;
+position: absolute;
+top: 130px;
+left: 100px;
+font-size:larger;
+}
+
+/*Estilo para input de formularios*/
+.nombrebar{
+    position: absolute;
+    top:  175px;
+    left: 100px;
+    background-color: #ffffff;
+    width: 200px;
+    border: 0px;
+    padding: 5px;
+    padding-left: 15px;
+    border-radius: 50px;
+    font-size: 14px;
+  
+}
+
+.cedulareg {
+    color: rgba(0, 0, 0, 0.884);
+font-family: "DM Sans";
+display: flex;
+position: absolute;
+top: 225px;
+left: 100px;
+font-size:larger;
+}
+
+/*Estilo para input de formularios*/
+.cedulabar{
+    position: absolute;
+    top:  270px;
+    left: 100px;
+    background-color: #ffffff;
+    width: 200px;
+    border: 0px;
+    padding: 5px;
+    padding-left: 15px;
+    border-radius: 50px;
+    font-size: 14px;
+  
+}
+
+.horarioreg {
+    color: rgba(0, 0, 0, 0.884);
+font-family: "DM Sans";
+display: flex;
+position: absolute;
+top: 320px;
+left: 100px;
+font-size:larger;
+}
+
+.horariobar{
+    position: absolute;
+    top:  360px;
+    left: 100px;
+    background-color: #ffffff;
+    width: 200px;
+    border: 0px;
+    padding: 5px;
+    padding-left: 15px;
+    border-radius: 50px;
+    font-size: 14px;
+  
+}
+
+/*Botón de inscribirse a curso*/
+.boton_curso{
+    position: absolute;
+    top:  475px;
+    left: 250px;
+    background-color:#0e4e29;
+    width: 200px;
+    border: 0px;
+    padding: 5px;
+    padding-left: 15px;
+    border-radius: 50px;
+    font-size: 20px;
+    color:#ffffff;
+  
+}
+
+.volverh{
+    font-family: "DM Sans";
+    display: flex;
+position: absolute;
+top: 525px;
+left: 300px;
+color: #000000;
+font-size:small;  
+}
+
+/*Estilo de fondo de página de registro*/
+#bgcien{
+    width: 1440px;
+height: 941px;
+flex-shrink: 0;
+background-image: url('images/ciencias1.jpg');
+}
+
+#bgquim{
+    width: 1440px;
+height: 941px;
+flex-shrink: 0;
+background-image: url('images/quimica1.jpg');
 }
