@@ -1,18 +1,27 @@
+
+
+/* Fuentes importadas */
 @import url('https://fonts.googleapis.com/css?family=DM+Sans');
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@600&display=swap');
 
-/* Estilo del cuerpo de la página */
-body {
-    background-color: #bbbbbb;
-    overflow-x: hidden;
-    font-family: "DM Sans";
-    font-style: normal;
-    font-weight: 400;
-}
+/* 
 
 
 
-/* Estilos - LOGIN */
+
+
+
+
+
+
+
+
+
+
+
+ */
+
+/* Estilos - PÁGINA LOGIN */
 
 /* Estilo del cuerpo del login*/
 #body_registro {
@@ -30,28 +39,30 @@ body {
     height: 100%;
     object-fit: cover;
     position: absolute;
-    top: 0%;
+    top: 0;
     left: 45%;
 }
 
-
-/* Capa negra con transparencia superpuesta sobre la imagen */
-.registro::before {
-    content: "";
+/* Capa negra superpuesta sobre imagen Registro */
+.overlay {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 45%;
+    width: 55%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); 
-}
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 2; 
+  }
+
+
+
 
 
 /* Logo del cuerpo del login*/
 .logotitulog {
     position: absolute;
     top: 50px;
-    left: 40px;
+    left: 45px;
     width: 13%;
 }
 
@@ -69,7 +80,6 @@ body {
 .formulario {
     display: flex;
     flex-direction: column;
-    width: 300px;
     margin: 20px;
     position: absolute;
     top: 190px;
@@ -90,9 +100,11 @@ body {
     background-color: #f7f7f7;
 }
 
-.crear-button {
+
+/* Estilo del botón de Crear */
+.log-button {
     font-family: "DM Sans";
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 12px;
     width: 455px;
     font-size: 16px;
@@ -103,11 +115,26 @@ body {
     border-style: none;
   }
   
-.crear-button[type="submit"]:hover {
+.log-button[type="submit"]:hover {
     cursor: pointer;
+    background-color: #2e7049;
   }
 
 
+  /* Texto de alternativa de ingreso */
+.alt {
+    font-size: small;
+    text-align: center;
+    color: #4d4d4d;
+}
+
+.enfasis {
+    text-decoration: underline ;
+    font-weight: bold;
+    color: #0e4e29;
+  }
+
+/* 
 
 
 
@@ -117,8 +144,23 @@ body {
 
 
 
+
+
+
+
+
+ */
 
 /* Estilos - HOME */
+
+/* Estilo del cuerpo de la página */
+body {
+    background-color: #bbbbbb;
+    overflow-x: hidden;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+}
 
 /* Estilos del contenido del banner */
 #banner {
@@ -280,17 +322,20 @@ button[type="submit"]:hover {
 
 
 .bannerbienvenida {
-        background-image: url('images/ciencias.gif');
-        width: 93.5%;
-        height: 185px;
-        position: absolute;
-        top:  110px;
-        left: 48px;
-        border-radius: 6px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);  
-}
-
-.bannerbienvenida::before {
+    background-image: url('images/ciencias.gif');
+    background-size: contain;
+    width: 93.5%;
+    height: 130px;
+    position: absolute;
+    top:  95px;
+    left: 48px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+  }
+  
+  .bannerbienvenida::before {
     content: "";
     position: absolute;
     top: 0;
@@ -301,26 +346,32 @@ button[type="submit"]:hover {
     border-radius: 6px;
     z-index: 1;
     pointer-events: none;
-}
-
-.bienvenida {
+    transition: background-color 0.3s;
+  }
+  
+  .bienvenida {
     font-family: "DM Sans";
+    text-align: center;
     color: #ffffff;
-    font-size: xx-large;
+    font-size: x-large;
     position: relative;
     z-index: 8888;
-    top: 20px;
-    left: 40px;
-}
-
+    top: 10px;
+    transition: transform 0.2s ease-in-out; 
+ }
+  
+  .bienvenida:hover {
+    transform: scale(1.05);
+  }
   
 
-
+  
 .cursos {
+    font-family: 'Geologica', sans-serif;
     position: relative;
     font-weight: bold;
     color: #0e4e29;
-    top:  310px;
+    top:  255px;
     left: 40px;
 }
   
@@ -331,13 +382,16 @@ button[type="submit"]:hover {
     width: 405px;
     height: 160px;
     position: absolute;
-    top:  380px;
+    top:  320px;
     left: 48px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);  
-}
-
-.curso1::before {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  /* Capa de transparencia negra superpuesta */
+  .curso1::before {
     content: "";
     position: absolute;
     top: 0;
@@ -347,10 +401,19 @@ button[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 6px;
     z-index: 1;
-    pointer-events: none;
-}
-
-
+    transition: background-color 0.3s; 
+  }
+  
+  .curso1:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: scale(1.04);
+  }
+  
+  .curso1:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+/* Estilo del título del curso */
 .t-curso1 {
     font-family: "DM Sans";
     font-size:xx-large;
@@ -368,13 +431,16 @@ button[type="submit"]:hover {
     width: 405px;
     height: 160px;
     position: absolute;
-    top:  380px;
+    top:  320px;
     left: 478px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);  
-}
-
-.curso2::before {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+    /* Capa de transparencia negra superpuesta */
+  .curso2::before {
     content: "";
     position: absolute;
     top: 0;
@@ -384,34 +450,45 @@ button[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 6px;
     z-index: 1;
-    pointer-events: none;
-}
-
-.t-curso2 {
+    transition: background-color 0.3s;
+  }
+  
+  .curso2:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: scale(1.04);
+  }
+  
+  .curso2:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .t-curso2 {
     font-family: "DM Sans";
-    font-size:xx-large;
+    font-size: xx-large;
     color: #ffffff;
     position: absolute;
     z-index: 8888;
-    bottom: 5%;    
+    bottom: 5%;
     left: 25px;
-}
-
-
-
-/* Estilo de contenedor de Curso 3 */
-.curso3 {
+  }
+  
+  
+  /* Estilo de contenedor de Curso 3 */
+  .curso3 {
     background-image: url('images/programacion.jpg');
     width: 405px;
     height: 160px;
     position: absolute;
-    top:  380px;
+    top:  320px;
     left: 905px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);  
-}
-
-.curso3::before {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+    /* Capa de transparencia negra superpuesta */
+  .curso3::before {
     content: "";
     position: absolute;
     top: 0;
@@ -421,30 +498,39 @@ button[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 6px;
     z-index: 1;
-    pointer-events: none;
-}
-
-
-.t-curso3 {
+    transition: background-color 0.3s;
+  }
+  
+  .curso3:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: scale(1.04);
+  }
+  
+  .curso3:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .t-curso3 {
     font-family: "DM Sans";
-    font-size:xx-large;
+    font-size: xx-large;
     color: #ffffff;
     position: absolute;
     z-index: 8888;
-    bottom: 5%;    
+    bottom: 5%;
     left: 25px;
-}
+  }
+  
 
 
 
 
-
-
+/* Título Noticias */
 .noticias {
+    font-family: 'Geologica', sans-serif;
     position: relative;
     font-weight: bold;
     color: #0e4e29;
-    top: 510px;
+    top: 460px;
     left: 40px;
 }
   
@@ -457,7 +543,7 @@ button[type="submit"]:hover {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    top: 510px;
+    top: 455px;
     background-color: #ebebeb;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
@@ -471,7 +557,7 @@ button[type="submit"]:hover {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    top: 510px;
+    top: 455px;
     background-color: #ebebeb;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
@@ -484,7 +570,7 @@ button[type="submit"]:hover {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    top: 510px;
+    top: 455px;
     background-color: #ebebeb;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
@@ -501,31 +587,38 @@ iframe {
 
 /* Estilos contenedor 1 - Noticia 1 */
 .t_noticia_1 {
-    font-family: "DM Sans";
-    color: #06182F;
+    font-family: "Geologica", sans-serif;
+    font-size: xx-large;
+    color: #0e4e29;
     position:absolute;
-    top:97px;
+    top: 60px;
     left: 585px;
     z-index: 9998;
-    
+    transition: text-decoration 0.3s;  
 }
+
+
+.t_noticia_1:hover {
+    text-decoration: underline;
+}
+
 
 .p_noticia_1 {
     font-family: "DM Sans";
     font-size: larger;
-    color: #06182F;
+    color: #242424;
     position:absolute;
-    top:190px;
+    top:170px;
     left: 585px;
     z-index: 9998;
 }
 
-.cortesia1 {
+.ver-mas {
     font-family: "DM Sans";
     font-size: small;
-    color: #06182F;
+    color: #242424;
     position:absolute;
-    top:260px;
+    top:250px;
     left: 585px;
     z-index: 9998;
 }
@@ -533,68 +626,65 @@ iframe {
 
 /* Estilos contenedor 2 - Noticia 2 */
 .t_noticia_2 {
-    font-family: "DM Sans";
-    color: #06182F;
+    font-family: "Geologica", sans-serif;
+    font-size: xx-large;
+    color: #0e4e29;
     position:absolute;
-    top:93px;
+    top: 60px;
     left: 585px;
     z-index: 9998;
-    
+    transition: text-decoration 0.3s;  
+}
+
+
+.t_noticia_2:hover {
+    text-decoration: underline;
 }
 
 .p_noticia_2 {
     font-family: "DM Sans";
     font-size: larger;
-    color: #06182F;
+    color: #242424;
     position:absolute;
-    top:190px;
+    top:170px;
     left: 585px;
     z-index: 9998;
 }
 
-.cortesia2 {
-    font-family: "DM Sans";
-    font-size: small;
-    color: #06182F;
-    position:absolute;
-    top:260px;
-    left: 585px;
-    z-index: 9998;
-}
 
 
 /* Estilos contenedor 3 - Noticia 3 */
 .t_noticia_3 {
-    font-family: "DM Sans";
-    color: #06182F;
+    font-family: "Geologica", sans-serif;
+    font-size: xx-large;
+    color: #0e4e29;
     position:absolute;
-    top:100px;
+    top: 60px;
     left: 585px;
     z-index: 9998;
-    
+    transition: text-decoration 0.3s;  
+}
+
+
+.t_noticia_3:hover {
+    text-decoration: underline;
 }
 
 .p_noticia_3 {
     font-family: "DM Sans";
     font-size: larger;
-    color: #06182F;
+    color: #242424;
     position:absolute;
-    top:190px;
-    left: 585px;
-    z-index: 9998;
-}
-
-.cortesia3 {
-    font-family: "DM Sans";
-    font-size: small;
-    color: #06182F;
-    position:absolute;
-    top:260px;
+    top:170px;
     left: 585px;
     z-index: 9998;
 }
 
 
+
+
+
+/* Estilos del menú inferior */
 #menuinferior {
         background-color: #535353;
         font-family: "DM Sans";
@@ -603,20 +693,60 @@ iframe {
         width: 200%;
         padding: 1px;
         position: absolute;
-        top: 1650px;        
+        top: 1620px;        
         left: 0;
         padding-left: 0%;
 }
 
 .listamenu {
+    display: inline-flex;
+    padding-left: 10px;
     list-style-type: none;
+    position: relative;
+    left: 50px;
 }
 
+.elementos {
+    margin-right: 70px;
+    transition: text-decoration 0.3s;  
+}
+
+.elementos:hover {
+    text-decoration: underline;
+}
+
+.cerrar-sesion { 
+    font-family: "DM Sans";
+    width: 130px;
+    padding: 7px;
+    margin-left: 100px;
+    border-radius: 40px;
+    border-width: 1.5px;
+    background-color: #0e4e29;
+    color: #ffffff;
+    border-style: none;
+    position: relative;
+    top: -5px;
+}
+/* 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+ */
+
+/* Estilo - PÁGINAS DE REGISTRO */
 
 /*Estilo de fondo de página de registro*/
 #bgprog{
