@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=DM+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@600&display=swap');
 
 /* Estilo del cuerpo de la página */
 body {
@@ -9,19 +10,103 @@ body {
     font-weight: 400;
 }
 
+
+
 /* Estilos - LOGIN */
 
+/* Estilo del cuerpo del login*/
+#body_registro {
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+}
 
 
-.login {
-    width: 60%;
+/* Estilo de imagen de la página de login */
+.registro {
+    width: 55%;
     height: 100%;
     object-fit: cover;
     position: absolute;
     top: 0%;
-    left: 40%;
-    background: rgba(0, 0, 0, 0.9);
+    left: 45%;
 }
+
+
+/* Capa negra con transparencia superpuesta sobre la imagen */
+.registro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+}
+
+
+/* Logo del cuerpo del login*/
+.logotitulog {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    width: 13%;
+}
+
+/* Título Crear Cuenta */
+.titulo {
+    font-family: 'Geologica', sans-serif;
+    color: #242424;
+    font-size: xx-large;
+    position: absolute;
+    top: 120px;
+    left: 60px;
+}
+
+/* Estilo del formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px;
+    position: absolute;
+    top: 190px;
+    left: 40px;
+}
+
+/* Estilo de los campos de entrada */
+.formulario input {
+    font-family: "DM Sans";
+    margin-bottom: 15px;
+    padding: 12px;
+    width: 430px;
+    font-size: 16px;
+    border-radius: 40px;
+    border-width: 1.5px;
+    border-color: #c0c0c0;
+    border-style: solid; 
+    background-color: #f7f7f7;
+}
+
+.crear-button {
+    font-family: "DM Sans";
+    margin-top: 10px;
+    padding: 12px;
+    width: 455px;
+    font-size: 16px;
+    border-radius: 40px;
+    border-width: 1.5px;
+    background-color: #0e4e29;
+    color: #ffffff;
+    border-style: none;
+  }
+  
+.crear-button[type="submit"]:hover {
+    cursor: pointer;
+  }
+
 
 
 
@@ -195,7 +280,7 @@ button[type="submit"]:hover {
 
 
 .bannerbienvenida {
-        background-image: url('images/banner.jpg');
+        background-image: url('images/ciencias.gif');
         width: 93.5%;
         height: 185px;
         position: absolute;
