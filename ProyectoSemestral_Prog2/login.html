@@ -6,18 +6,19 @@
     <link rel="icon" type="image/x-icon" href="images/logoico.ico">
     <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
-<body id="body_registro">
+<body class="body-registro">
 
 
     <img class="logotitulog" src="images\logotitulog.png">
     <h1 class="titulo">Iniciar Sesión</h1>
 
     <div class="formulario">
-        <input type="text" placeholder="Nombre">
-        <input type="password" placeholder="Contraseña">
+    	<form action="JSP/login.jsp" method="Post">
+        <input type="text" name="Nombre" placeholder="Nombre">
+        <input type="password" name="Contrasenha" placeholder="Contraseña">
 
         <button class="log-button" type="submit">Iniciar sesión</button>
-
+		</form>
         <br>
 
 
@@ -29,7 +30,15 @@
 
 
     <div id="imagenlateral">
-        <img class="registro" src="images\registro.jpg">
+
+        <img class="registro" src="images\login.jpg">
+
+        <img class="comillas" src="images\comillas.png">
+
+        <p class="frase">Lo que conocemos es una gota, <br>lo que no conocemos es un océano.</p>
+
+        <p class="autor">Isaac Newton</p>
+
         <div class="overlay"></div>
     </div>
 

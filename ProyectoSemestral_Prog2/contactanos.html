@@ -2,35 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SoloCiencia - Contáctanos</title>
+    <title>SoloCiencia - Sobre Nosotros</title>
     <link rel="icon" type="image/x-icon" href="images/logoico.ico">
     <link rel="stylesheet" type="text/css" href="estilo.css" />
 
 </head>
-<body>
-    <div id="banner">
-        <img class="mainlogo" src="images\logotitulow.png">
+<body class="body-contactanos">
+    <header>
+        <div id="banner">
+                <a href="home.html"><img class="mainlogo" src="images\logotitulow.png"></a>
+    
+    
+            <ul class="lista">
+                <li class="opcion"><a href="home.html">
+                    Inicio</a></li>
+                <li class="opcion dropdown">
+                    <a>Registro a cursos</a>
+                    <ul class="dropdown-menu">
+                        <a href="ciencias.html"><li>Ciencias Naturales</li></a>
+                        <a href="quimicabiologia.html"><li>Química y Biología</li></a>
+                        <a href="programacion.html"><li>Programación</li></a>
+                    </ul> 
+                </li>
+                <li class="opcion"><a href="referencias.html">Referencias</a></li>
+                <li class="opcion"><a  class="active" href="contactanos.html">Contáctanos</a></li>
+            </ul>
+    
+            <a href="https://instagram.com/solociencia_com?igshid=OGQ5ZDc2ODk2ZA=="><img class="instagram" src="images\instagram.png"></a>
+    
+    
+            <a href="https://twitter.com/solociencia_com?s=21&t=_6ZvcTnzQaqWVP_-1llbnA"><img class="twitter" src="images\twitter.png"></a>
+    
+    
+            <span> 
+                <form action="https://www.google.com/search" method="get">
+                    <input type="text" name="q" id="search-box"  placeholder="Buscar">
+                    <button class="buscar" type="submit"><img class="img-buscar" src="images/search.png"></button>
+                </form>
+            </span>
+    
+        </div>
+    </header>
 
-    <ul class="lista">
-        <li class="opcion"><a href="home.html">
-            Inicio</a></li>
-			<li class="opcion dropdown">
-				<a>Registro a cursos</a>
-				<ul class="dropdown-menu">
-					<li><a href="ciencias.html">Ciencias Naturales</a></li>
-					<li><a href="quimicabiologia.html">Química y Biología</a></li>
-					<li><a href="programacion.html">Programación</a></li>
-				</ul> 
-			</li>
-        <li class="opcion"><a href="referencias.html">Referencias</a></li>
-        <li class="opcion"><a class="active" href="contactanos.html">Contáctanos</a></li>
-    </ul>
 
-    <span> 
-        <input type="text" id="search-box" placeholder="Buscar">
-    </span>
+<h1>Sobre Nosotros</h1>
 
-</div>
+<section>
+    <div class="contactanos">
+
+        <div class="integrante">
+          <h2>Jasibeilis<br>Navarro</h2>
+          <img src="images/jasi.jpg">
+          <p style="font-size: 17px;"><b><br>Cédula: </b>8-990-1425</p>
+          <p style="font-size: 17px;"><b>Carrera: </b>Lic. en Ingeniería de Software</p>
+          <p>Como desarrolladora he podido participar en proyectos y prácticas educativas. Adicional he desarrollado una página en forma de diseño. </p>        
+        </div>
+
+        <div class="integrante">
+          <h2>Alfonso<br>Rodríguez</h2>
+          <img src="images/alfonso.jpg">
+          <p style="font-size: 17px;"><b><br>Cédula: </b>8-994-2393</p>
+          <p style="font-size: 17px;"><b>Carrera: </b>Lic. en Ingeniería de Software</p>
+          <p><br>Como desarrollador, he obtenido experiencia en proyectos educativos, cursos y capacitaciones.</p>        
+        </div>
+
+        <div class="integrante">
+          <h2>Alejandro<br>González</h2>
+          <img src="images/alejandro.jpg">
+        
+          <p style="font-size: 17px;"><b><br>Cédula: </b>E-8-182476</p>
+          <p style="font-size: 17px;"><b>Carrera: </b>Lic. en Ingeniería de Software</p>
+          <p>Mi experiencia como desarrollador no va más allá del ámbito meramente educativo. Esto incluye tanto la escuela, cursos, certificaciones y la universidad.</p>        
+        </div>
+
+        <div class="integrante">
+          <h2>Lourdes<br>López</h2>
+          <img src="images/lourdes.jpg">
+          <p style="font-size: 17px;"><b><br>Cédula: </b>8-988-2442</p>
+          <p style="font-size: 17px;"><b>Carrera: </b>Lic. en Ingeniería de Software</p>
+          <p>Como desarrolladora, poseo experiencia en el desarrollo de proyectos universitarios, prácticas, cursos online y también en forma de recreación.</p>        
+        </div>
+
+      </div>
+</section>
+
+<footer>
+    <div id="menuinferior">
+      <ul class="listamenu">
+        <li class="elementos"><a href="home.html">Inicio</a></li>
+        <li class="elementos"><a href="ciencias.html">Ciencias Naturales</a></li>
+        <li class="elementos"><a href="quimicabiologia.html">Química y Biología</a></li>
+        <li class="elementos"><a href="programacion.html">Programación</a></li>
+        <li class="elementos"><a href="referencias.html">Referencias</a></li>
+        <li class="elementos"><a href="contactanos.html">Contáctanos</a></li>
+        <li style="font-size: smaller;">&copy; Solo Ciencia. 2023</li>
+        <li><button class="cerrar-sesion" onclick="location.href='login.html'">Cerrar sesión</button>
+        </li>
+      </ul>
+    </div>
+  </footer>
 
 </body>
 </html>

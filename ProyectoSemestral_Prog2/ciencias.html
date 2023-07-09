@@ -7,16 +7,17 @@
     <link rel="stylesheet" type="text/css" href="estilo.css" />
 
 </head>
-<body>
+<body class="body-curso">
     <header>
         <div id="banner">
-                <img class="mainlogo" src="images\logotitulow.png">
+                <a href="home.html"><img class="mainlogo" src="images\logotitulow.png"></a>
+    
     
             <ul class="lista">
-                <li class="opcion"><a class="active" href="home.html">
+                <li class="opcion"><a href="home.html">
                     Inicio</a></li>
                 <li class="opcion dropdown">
-                    <a>Registro a cursos</a>
+                    <a class="active">Registro a cursos</a>
                     <ul class="dropdown-menu">
                         <a href="ciencias.html"><li>Ciencias Naturales</li></a>
                         <a href="quimicabiologia.html"><li>Química y Biología</li></a>
@@ -36,36 +37,61 @@
             <span> 
                 <form action="https://www.google.com/search" method="get">
                     <input type="text" name="q" id="search-box"  placeholder="Buscar">
-                    <button type="submit"><img class="buscar" src="images/search.png"></button>
+                    <button class="buscar" type="submit"><img class="img-buscar" src="images/search.png"></button>
                 </form>
             </span>
     
         </div>
     </header>
+    
 
 
-<div id="bgcien">
-    <div id="formcont">
-        <title class="t_curso"> Registro Curso Ciencias Naturales</title>
-        <form action="ciencias.jsp">
-            <label class="nombrereg"  for="nombre" >Nombre:</label>
-            <input class="nombrebar" type="text" id="nombre" name="nombre" required><br><br>
+<div id="ciencias">
+    <img id="curso-bg" src="images/galaxia.jpg">
+
+    <div id="div-formulario">
         
-            <label class="cedulareg" for="cedula">Cédula:</label>
-            <input class="cedulabar" type="cedula" id="cedula" name="cedula" required><br><br>
+        <title class="t_curso">Ciencias Naturales</title>
+        <p class="p_curso" >Explora las maravillas de las Ciencias Naturales en nuestro curso. Descubre la vida, el entorno y los fenómenos que dan forma al mundo que nos rodea. ¡Aprende y sorpréndete con nuestro curso de Ciencias Naturales!</p>
+
+        <h3 class="t-registro">Registro en curso</h3>
+
+        <form action="JSP/registro_ciencias_naturales.jsp" method="Post">
+            <label class="t-nombre"  for="nombre" >Nombre:</label>
+            <input class="input-nombre" placeholder="Ingrese su nombre" type="text" id="nombre" name="Nombre" required><br><br>
         
-            <label class="horarioreg" for="horario">Elige la fecha de inicio del curso:</label>
-            <select class="horariobar" id="horario" name="horario" required>
+            <label class="t-cedula" for="cedula">Cédula:</label>
+            <input class="input-cedula" placeholder="Ingrese su cédula"  type="cedula" id="cedula" name="Cedula" required><br><br>
+        
+            <label class="t-fecha" for="Fecha">Elige la fecha de inicio del curso:</label>
+            <select class="input-fecha" id="Fecha" name="Fecha" required>
               <option value="">Selecciona una opción</option>
-              <option value="julio">20 de julio</option>
-              <option value="octubre">24 de octubre</option>
-              <option value="noviembre">14 de noviembre</option>
+              <option value="20 de julio">20 de julio</option>
+              <option value="24 de octubre">24 de octubre</option>
+              <option value="14 de noviembre">14 de noviembre</option>
             </select><br><br>
         
-            <input class="boton_curso" type="submit" value="Inscribirse"> 
+            <input class="boton_curso" type="submit" value="Enviar"> 
+
         </form>
-        <h1 class="volverh"><a href="home.html">Volver a Inicio</a></h1>
+
     </div>
+
+    <footer>
+        <div id="menuinferior">
+          <ul class="listamenu">
+            <li class="elementos"><a href="home.html">Inicio</a></li>
+            <li class="elementos"><a href="ciencias.html">Ciencias Naturales</a></li>
+            <li class="elementos"><a href="quimicabiologia.html">Química y Biología</a></li>
+            <li class="elementos"><a href="programacion.html">Programación</a></li>
+            <li class="elementos"><a href="referencias.html">Referencias</a></li>
+            <li class="elementos"><a href="contactanos.html">Contáctanos</a></li>
+            <li style="font-size: smaller;">&copy; Solo Ciencia. 2023</li>
+            <li><button class="cerrar-sesion" onclick="location.href='login.html'">Cerrar sesión</button>
+            </li>
+          </ul>
+        </div>
+      </footer>
 
 </body>
 </html>

@@ -4,28 +4,15 @@
 @import url('https://fonts.googleapis.com/css?family=DM+Sans');
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@600&display=swap');
 
-/* 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
- */
 
 /* Estilos - PÁGINA LOGIN */
 
 /* Estilo del cuerpo del login*/
-#body_registro {
-    background-color: #f7f7f7;
+.body-registro {
+    background-color: #f0ebe6;
     overflow-x: hidden;
     font-family: "DM Sans";
     font-style: normal;
@@ -34,7 +21,7 @@
 
 
 /* Estilo de imagen de la página de login */
-.registro {
+#imagenlateral .registro {
     width: 55%;
     height: 100%;
     object-fit: cover;
@@ -43,6 +30,7 @@
     left: 45%;
 }
 
+
 /* Capa negra superpuesta sobre imagen Registro */
 .overlay {
     position: absolute;
@@ -50,11 +38,44 @@
     left: 45%;
     width: 55%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.7); 
     z-index: 2; 
+    transition: all 0.2s ease-in-out;
+  }
+
+ .overlay:hover {
+    background-color: rgba(0, 0, 0, 0.3); 
   }
 
 
+
+#imagenlateral .comillas {
+    position: absolute;
+    height: 37px;
+    top: 300px;
+    left: 654px;
+    z-index: 9999;
+}
+
+#imagenlateral .frase {
+    font-family: 'Geologica', sans-serif;
+    color: #f0ebe6;
+    font-size: 41px;
+    position: absolute;
+    top: 340px;
+    left: 660px;
+    z-index: 9999;
+}
+
+#imagenlateral .autor {
+    font-family: 'Geologica', sans-serif;
+    color: #f0ebe6;
+    font-size: 25px;
+    position: absolute;
+    top: 540px;
+    left: 660px;
+    z-index: 9999;
+}
 
 
 
@@ -80,10 +101,16 @@
 .formulario {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 20px;
     position: absolute;
     top: 190px;
     left: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilo de los campos de entrada */
@@ -97,7 +124,7 @@
     border-width: 1.5px;
     border-color: #c0c0c0;
     border-style: solid; 
-    background-color: #f7f7f7;
+    background-color: #ffffff;
 }
 
 
@@ -117,7 +144,7 @@
   
 .log-button[type="submit"]:hover {
     cursor: pointer;
-    background-color: #2e7049;
+    background-color: #1c6b3d;
   }
 
 
@@ -155,12 +182,14 @@
 
 /* Estilo del cuerpo de la página */
 body {
-    background-color: #bbbbbb;
+    background-image: url(images/background.jpg);
     overflow-x: hidden;
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 400;
 }
+
+
 
 /* Estilos del contenido del banner */
 #banner {
@@ -224,7 +253,7 @@ a.active {
 .opcion:hover {
     background-color: #1c5f38;
     color: #ffffff;
-    text-decoration: underline;
+    transition: all 0.08s ease-in;
 }
 
 
@@ -234,13 +263,12 @@ a.active {
 }
 
 .opcion.dropdown:hover .dropdown-menu {
-    display: block;
+    display: flex;
     position: absolute;
     top: 67px;
     left: 129px;
     background-color: #1c5f38;
-    padding: 10px;
-    width: 156px;
+    width: 136px;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
   }
@@ -256,16 +284,20 @@ a.active {
 .dropdown-menu li {
     padding: 7px;
     text-align: left;
-    font-size: 15px;
+    font-size: 13px;
+    position: relative;
+    left: -18px;
 
 }
 
 
 /* Efectos hover de los elementos del dropdown */
-.dropdown-menu li:hover {
+.dropdown-menu li:hover,
+.dropdown-menu li:hover ul {
     background-color: #286943;
     color: #ffffff;
-    text-decoration: underline;
+    width: 103%;
+    transition: all 0.08s ease-in;
 }
 
 
@@ -290,11 +322,17 @@ a.active {
 
 
 .buscar {
+    background-color: #ffffff00;
+    border-style: none;
     height: 16px;
     position: absolute;
     top:  23px;
-    left: 1300px;
-    z-index: 9999;
+    left: 1293px;
+    z-index: 9998;
+}
+
+.img-buscar {
+    height: 16px;
 }
 
   
@@ -330,9 +368,10 @@ button[type="submit"]:hover {
     top:  95px;
     left: 48px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    transition: box-shadow 0.3s;
+    transition: all 0.2s ease-in-out;
+
   }
   
   .bannerbienvenida::before {
@@ -360,10 +399,12 @@ button[type="submit"]:hover {
     transition: transform 0.2s ease-in-out; 
  }
   
-  .bienvenida:hover {
-    transform: scale(1.05);
+  .bannerbienvenida:hover,
+  .bannerbienvenida:hover .bienvenida {
+    transform: scale(1.01) rotate(0.4deg);
   }
-  
+
+
 
   
 .cursos {
@@ -385,9 +426,9 @@ button[type="submit"]:hover {
     top:  320px;
     left: 48px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: all 0.3s;
   }
   
   /* Capa de transparencia negra superpuesta */
@@ -398,19 +439,19 @@ button[type="submit"]:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 6px;
     z-index: 1;
-    transition: background-color 0.3s; 
+    transition: all 0.3s; 
   }
   
   .curso1:hover {
-    background-color: rgba(0, 0, 0, 0.3);
     transform: scale(1.04);
+    text-decoration: underline;
   }
   
   .curso1:hover::before {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
   }
   
 /* Estilo del título del curso */
@@ -434,9 +475,9 @@ button[type="submit"]:hover {
     top:  320px;
     left: 478px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: all 0.3s;
   }
   
     /* Capa de transparencia negra superpuesta */
@@ -447,19 +488,18 @@ button[type="submit"]:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 6px;
     z-index: 1;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
   }
   
   .curso2:hover {
-    background-color: rgba(0, 0, 0, 0.3);
     transform: scale(1.04);
   }
   
   .curso2:hover::before {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
   }
   
   .t-curso2 {
@@ -482,9 +522,9 @@ button[type="submit"]:hover {
     top:  320px;
     left: 905px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: all 0.3s;
   }
   
     /* Capa de transparencia negra superpuesta */
@@ -495,19 +535,18 @@ button[type="submit"]:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 6px;
     z-index: 1;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
   }
   
   .curso3:hover {
-    background-color: rgba(0, 0, 0, 0.3);
     transform: scale(1.04);
   }
   
   .curso3:hover::before {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
   }
   
   .t-curso3 {
@@ -544,9 +583,10 @@ button[type="submit"]:hover {
     margin-right: auto;
     position: relative;
     top: 455px;
-    background-color: #ebebeb;
+    background-color: #ebebeb6b;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    transition: all 0.2s ease-in-out;
 }
 
 
@@ -558,9 +598,10 @@ button[type="submit"]:hover {
     margin-right: auto;
     position: relative;
     top: 455px;
-    background-color: #ebebeb;
+    background-color: #ebebeb6b;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    transition: all 0.2s ease-in-out;
 }
 
 
@@ -571,11 +612,19 @@ button[type="submit"]:hover {
     margin-right: auto;
     position: relative;
     top: 455px;
-    background-color: #ebebeb;
+    background-color: #ebebeb6b;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    transition: all 0.2s ease-in-out;
 }
 
+
+.noticia_1:hover,
+.noticia_2:hover,
+.noticia_3:hover {
+    background-color: #ebebeb;
+    transform: scale(1.009);
+}
 
 
 
@@ -594,12 +643,14 @@ iframe {
     top: 60px;
     left: 585px;
     z-index: 9998;
-    transition: text-decoration 0.3s;  
+    transition: all 0.2s;  
 }
 
 
-.t_noticia_1:hover {
-    text-decoration: underline;
+.noticia_1:hover .t_noticia_1,
+.noticia_2:hover .t_noticia_2,
+.noticia_3:hover .t_noticia_3 {
+    color: #31975a;
 }
 
 
@@ -633,12 +684,7 @@ iframe {
     top: 60px;
     left: 585px;
     z-index: 9998;
-    transition: text-decoration 0.3s;  
-}
-
-
-.t_noticia_2:hover {
-    text-decoration: underline;
+    transition: all 0.2s;  
 }
 
 .p_noticia_2 {
@@ -662,12 +708,7 @@ iframe {
     top: 60px;
     left: 585px;
     z-index: 9998;
-    transition: text-decoration 0.3s;  
-}
-
-
-.t_noticia_3:hover {
-    text-decoration: underline;
+    transition: all 0.2s;  
 }
 
 .p_noticia_3 {
@@ -684,215 +725,551 @@ iframe {
 
 
 
-/* Estilos del menú inferior */
-#menuinferior {
-        background-color: #535353;
-        font-family: "DM Sans";
-        font-size: small;
-        color: #ebebeb;
-        width: 200%;
-        padding: 1px;
-        position: absolute;
-        top: 1620px;        
-        left: 0;
-        padding-left: 0%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo - PÁGINAS DE REGISTRO A CURSOS */
+
+/*Estilos de fondo de página de registro a cursos*/
+#curso-bg {
+    width: 100%;
+    height: 130%;
+    object-fit: cover;
+    position: absolute;
+    left: 0%;
 }
 
-.listamenu {
-    display: inline-flex;
-    padding-left: 10px;
-    list-style-type: none;
-    position: relative;
-    left: 50px;
-}
-
-.elementos {
-    margin-right: 70px;
-    transition: text-decoration 0.3s;  
-}
-
-.elementos:hover {
-    text-decoration: underline;
-}
-
-.cerrar-sesion { 
-    font-family: "DM Sans";
-    width: 130px;
-    padding: 7px;
-    margin-left: 100px;
-    border-radius: 40px;
-    border-width: 1.5px;
-    background-color: #0e4e29;
-    color: #ffffff;
-    border-style: none;
-    position: relative;
-    top: -5px;
-}
-/* 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- */
-
-/* Estilo - PÁGINAS DE REGISTRO */
-
-/*Estilo de fondo de página de registro*/
-#bgprog{
-    width: 1440px;
-height: 941px;
-flex-shrink: 0;
-background-image: url('images/programacion1.jpg');
-}
 
 /*Contenedor de formulario*/
-#formcont{
-width: 728px;
-height: 773px;
-flex-shrink: 0;
-border-radius: 20px;
-background: rgba(217, 217, 217, 0.90);
-position: absolute;
-    top:  150px;
+#div-formulario{
+    width: 600px;
+    height: 645px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #ffffffd5;
+    text-align: justify;
+    position: absolute;
+    padding: 30px;
+    top:  100px;
     left: 350px;
-    border-radius: 6px;
+    border-radius: 13px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
 }
 
-/*Estilo para título de formulario*/
-.t_curso{
+
+
+/*Estilo para título de curso*/
+.t_curso {
+    font-family: "Geologica", sans-serif;
+    display: flex;
+    position: absolute;
+    top: 50px;
+    left: 170px;
+    font-size: 35px;
+}
+
+
+#ciencias .t_curso {
+    color: #382c49;
+}
+
+#quimicabiologia .t_curso {
+    color: #283185;
+}
+
+#programacion .t_curso {
+    color: #2b8ba8;
+    left: 210px;
+}
+
+
+/*Estilo para introducción de curso*/
+.p_curso {
     font-family: "DM Sans";
     display: flex;
-position: absolute;
-top: 50px;
-left: 150px;
-color: #0e4e29;
-font-size:xx-large;
+    position: relative;
+    padding: 30px;
+    top: 40px;
+    color: #080808;
+}
+
+
+
+#div-formulario form {
+    position: relative;
+    top: -50px;
+    left: -70px;
+}
+
+.t-registro {
+    font-family: "Geologica", sans-serif;
+    position: absolute;
+    top: 225px;
+    left: 59px;
+    color: #382c49;
+    font-size: 21px;
+}
+
+#ciencias .t-registro {
+    color: #382c49;
+}
+
+#quimicabiologia .t-registro {
+    color: #283185;
+    top: 245px;
+}
+
+#programacion .t-registro {
+    color: #2b8ba8;
+    top: 255px;
 }
 
 /*Estilo para los label de formulario*/
-.nombrereg {
+.t-nombre {
     color: rgba(0, 0, 0, 0.884);
-font-family: "DM Sans";
-display: flex;
-position: absolute;
-top: 130px;
-left: 100px;
-font-size:larger;
+    font-family: "DM Sans";
+    display: flex;
+    position: absolute;
+    top: 140px;
+    left: 100px;
+    font-size: smaller;
 }
 
 /*Estilo para input de formularios*/
-.nombrebar{
+.input-nombre{
     position: absolute;
-    top:  175px;
+    top:  160px;
     left: 100px;
-    background-color: #ffffff;
-    width: 200px;
-    border: 0px;
-    padding: 5px;
-    padding-left: 15px;
-    border-radius: 50px;
-    font-size: 14px;
+    font-family: "DM Sans";
+    padding: 12px;
+    width: 520px;
+    font-size: 16px;
+    border-radius: 13px;
+    border-width: 1.5px;
+    border-color: #9b9b9b;
+    border-style: solid; 
+    background-color: #ffffffd2;
   
 }
 
-.cedulareg {
+.t-cedula {
     color: rgba(0, 0, 0, 0.884);
-font-family: "DM Sans";
-display: flex;
-position: absolute;
-top: 225px;
-left: 100px;
-font-size:larger;
-}
+    font-family: "DM Sans";
+    display: flex;
+    position: absolute;
+    top: 235px;
+    left: 100px;
+    font-size: smaller;}
 
 /*Estilo para input de formularios*/
-.cedulabar{
+.input-cedula{
     position: absolute;
-    top:  270px;
+    top:  255px;
     left: 100px;
-    background-color: #ffffff;
-    width: 200px;
-    border: 0px;
-    padding: 5px;
-    padding-left: 15px;
-    border-radius: 50px;
-    font-size: 14px;
-  
+    font-family: "DM Sans";
+    padding: 12px;
+    width: 520px;
+    font-size: 16px;
+    border-radius: 13px;
+    border-width: 1.5px;
+    border-color: #9b9b9b;
+    border-style: solid; 
+    background-color: #ffffffd2;
 }
 
-.horarioreg {
+.t-fecha {
     color: rgba(0, 0, 0, 0.884);
-font-family: "DM Sans";
-display: flex;
-position: absolute;
-top: 320px;
-left: 100px;
-font-size:larger;
+    font-family: "DM Sans";
+    display: flex;
+    position: absolute;
+    top: 330px;
+    left: 100px;
+    font-size: smaller;
 }
 
-.horariobar{
+
+.input-fecha{
     position: absolute;
-    top:  360px;
+    top:  350px;
     left: 100px;
-    background-color: #ffffff;
-    width: 200px;
-    border: 0px;
-    padding: 5px;
-    padding-left: 15px;
-    border-radius: 50px;
-    font-size: 14px;
-  
+    font-family: "DM Sans";
+    padding: 12px;
+    width: 540px;
+    font-size: 16px;
+    border-radius: 13px;
+    border-width: 1.5px;
+    border-color: #9b9b9b;
+    border-style: solid; 
+    background-color: #ffffffd2;
 }
 
 /*Botón de inscribirse a curso*/
-.boton_curso{
+.boton_curso {
     position: absolute;
-    top:  475px;
-    left: 250px;
-    background-color:#0e4e29;
-    width: 200px;
+    top:  430px;
+    left: 100px;
+    width: 540px;
     border: 0px;
-    padding: 5px;
-    padding-left: 15px;
-    border-radius: 50px;
-    font-size: 20px;
+    padding: 12px;
+    border-radius: 13px;
+    font-size: 17px;
     color:#ffffff;
-  
+    transition: 0.1s;
 }
 
-.volverh{
-    font-family: "DM Sans";
+
+#ciencias .boton_curso {
+    background-color:#382c49;
+}
+#ciencias .boton_curso:hover {
+    background-color:#55466b; 
+    cursor: pointer;
+}
+
+
+
+#quimicabiologia .boton_curso {
+    background-color: #283185;
+}
+#quimicabiologia .boton_curso:hover {
+    background-color:#3a428b; 
+    cursor: pointer;
+}
+
+#programacion .boton_curso {
+    background-color: #2b8ba8;
+}
+#programacion .boton_curso:hover {
+    background-color:#3fabcc; 
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos - Página Referencias */
+
+
+/* Estilo tabla periodica */
+.tablaperiodica {
+  position: relative;
+  top: 50px;
+  left: 10px;
+  width: 1310px;
+  height: 740px;
+}
+
+
+#texttablaperiodica {
+  font-family: "Geologica", sans-serif;
+  position: relative;
+  font-weight: bold;
+  font-size: xx-large;
+  color: #142061;
+  top: 4%;
+  left: 2.5%;
+}
+
+.tablaperiodica h3 {
+  position: absolute;
+  font-weight: lighter;
+  top: 8.5%;
+  left: 2.5%;
+}
+
+
+.tablaperiodica table {
+  position: absolute;
+  border-collapse: collapse;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20px;
+  left: 2.5%;
+  top: 20%;
+}
+
+.tablaperiodica td {
+  border: 1px solid black;
+  padding: 10px 0px;
+  vertical-align: middle;
+  text-align: left;
+  margin: 0;
+}
+
+.tablaperiodica .oculto {
+  border: 0px solid rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px 23.3px;
+
+}
+
+.tablaperiodica table td a {
+  padding: 0px;
+  text-decoration: none;
+  color: black;
+}
+
+.tablaperiodica .purpura {
+  background-color: #b191c7;
+  padding: 10px 23.3px;
+  transition: all 0.25s;
+}
+
+.tablaperiodica .azul {
+  background-color: #7cbbca;
+  padding: 10px 23.3px;
+  transition: all 0.25s;
+}
+
+.tablaperiodica .rosa {
+  background-color: #da6ada;
+  padding: 10px 23.3px;
+  transition: all 0.25s;
+}
+
+.tablaperiodica .verde {
+  background-color: #65c95f;
+  padding: 10px 23.3px;
+  transition: all 0.25s;
+}
+
+.tablaperiodica .crema {
+  background-color: #eed076;
+  padding: 10px 23.3px;
+  transition: all 0.25s;
+}
+
+.tablaperiodica .ladrillo {
+  background-color: #e2a880;
+  padding: 10px 23.3px;
+  transition: all 0.25s;
+}
+
+.tablaperiodica .amarillo {
+  background-color: #f3f37e;
+  padding: 10px 23.3px;
+  transition: all 0.25s;
+}
+
+.tablaperiodica .verdeoscuro {
+  background-color: #add88e;
+  padding: 10px 23.3px;
+  transition: all 0.25s;
+}
+
+.tablaperiodica .unaletra {
+  transform: all 0.2s;
+}
+
+.amarillo:hover,
+.azul:hover,
+.purpura:hover,
+.crema:hover,
+.ladrillo:hover,
+.rosa:hover,
+.verde:hover,
+.verdeoscuro:hover {
+  background-color: #031fa2;
+  color: white;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+/* Estilos - PÁGINA CONTÁCTANOS */
+
+.body-contactanos h1 {
+    font-family: "Geologica", sans-serif;
+    font-size: 33px;
+    color: #0e4e29;
+    position: relative;
+    top: 85px;
+    left: 543px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.contactanos {
     display: flex;
-position: absolute;
-top: 525px;
-left: 300px;
-color: #000000;
-font-size:small;  
+    position: relative;
+    top: 80px;
+    left: 10px;
+  }
+
+  .integrante {
+    width: 270px;
+    background-color: rgba(255, 255, 255, 0.562);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
+    padding: 40px;
+    text-align: center;
+    margin: 8px; 
+    margin-right: 28px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .integrante:hover {
+    transform: scale(1.02);
+    background-color: #0e4e2981;
+  }
+
+  .integrante:hover h2 {
+    color: #ffffff;
+    transform: scale(1.02);
+  }
+
+
+
+  .integrante img {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border-radius: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease-in-out;
+  }
+
+  .integrante:hover img {
+    transform: scale(1.06) rotate(2deg);
+  }
+  
+  .integrante h2 {
+    font-family: "Geologica", sans-serif;
+    line-height: 24px;
+    position: relative;
+    top: -20px;
+    font-size: 29px;
+    color: #202020;
+
+  }
+
+  .integrante p {
+    text-align: justify;
+    color: #202020;
+  }
+
+
+
+
+
+
+
+/* Estilos del menú inferior */
+#menuinferior {
+    background-color: #2c2c2c;
+    font-family: "DM Sans";
+    font-size: small;
+    color: #ebebeb;
+    width: 200%;
+    padding: 1px;
+    position: absolute;
+    left: 0;
+    padding-left: 0%;
 }
 
-/*Estilo de fondo de página de registro*/
-#bgcien{
-    width: 1440px;
-height: 941px;
-flex-shrink: 0;
-background-image: url('images/ciencias1.jpg');
+.listamenu {
+display: inline-flex;
+padding-top: 10px;
+padding-left: 10px;
+list-style-type: none;
+position: relative;
+left: 50px;
 }
 
-#bgquim{
-    width: 1440px;
-height: 941px;
-flex-shrink: 0;
-background-image: url('images/quimica1.jpg');
+.elementos {
+margin-right: 70px;
+transition: text-decoration 0.3s;  
+}
+
+.elementos:hover {
+text-decoration: underline;
+}
+
+.cerrar-sesion { 
+font-family: "DM Sans";
+font-size: 13px;
+font-weight: bolder;
+width: 130px;
+padding: 7px;
+margin-left: 100px;
+border-radius: 40px;
+background-color: #f19824;
+color: #ffffff;
+border-style: none;
+position: relative;
+top: -10px;
+}
+
+.cerrar-sesion:hover { 
+background-color: #ffb452;
+cursor: pointer;
+
+}
+
+
+/* Posicionamiento de menú inferior según página */
+.body-home #menuinferior {
+    top: 1620px;
+  }
+  
+.body-curso #menuinferior {
+    top: 845px;
+  }
+
+.body-referencias #menuinferior {
+    top: 780px;
+}
+
+.body-contactanos #menuinferior {
+    top: 970px;
 }

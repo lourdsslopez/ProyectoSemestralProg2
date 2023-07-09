@@ -6,12 +6,13 @@
     <link rel="icon" type="image/x-icon" href="images/logoico.ico">
     <link rel="stylesheet" type="text/css" href="estilo.css" />
 </head>
-<body>
+<body class="body-home">
 
 
 <header>
     <div id="banner">
-			<img class="mainlogo" src="images\logotitulow.png">
+            <a href="home.html"><img class="mainlogo" src="images\logotitulow.png"></a>
+
 
         <ul class="lista">
 			<li class="opcion"><a class="active" href="home.html">
@@ -37,7 +38,7 @@
         <span> 
             <form action="https://www.google.com/search" method="get">
                 <input type="text" name="q" id="search-box"  placeholder="Buscar">
-                <button type="submit"><img class="buscar" src="images/search.png"></button>
+                <button class="buscar" type="submit"><img class="img-buscar" src="images/search.png"></button>
             </form>
         </span>
 
@@ -89,7 +90,7 @@
     <div class="noticia_1">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/lwAUbmho4uA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><h1 class="t_noticia_1">Nueva terapia de tecnología genética contra el cáncer</h1>
         <p class="p_noticia_1">Lanzan una nueva terapia basada en tecnología genética para tratar diversos tipos de cáncer, es denominada Car-NK "Genicar".</p>
-        <p class="ver-mas"><i>PARA CONOCER MÁS SOBRE ESTE TEMA, HAGA <a class="enfasis" href="https://www.milenio.com/videos/ciencia-y-salud/nueva-terapia-de-tecnologia-genetica-contra-el-cancer">CLICK AQUÍ</a></i></p>
+        <p class="ver-mas">PARA CONOCER MÁS SOBRE ESTE TEMA, HAGA <a class="enfasis" href="https://www.milenio.com/videos/ciencia-y-salud/nueva-terapia-de-tecnologia-genetica-contra-el-cancer">CLICK AQUÍ</a></p>
     </div>
     
     <br>
@@ -97,7 +98,7 @@
     <div class="noticia_2">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/n38v7AA5pmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   <h1 class="t_noticia_2">Tecnología 'milagro' contra el parkinson<br>y el temblor esencial</h1>
         <p class="p_noticia_2">María Santos, de 80 años sufre desde joven temblores, que se habían agudizado en los últimos años.</p>
-        <p class="ver-mas"><i>PARA CONOCER MÁS SOBRE ESTE TEMA, HAGA <a class="enfasis" href="https://www.lavanguardia.com/vida/20220310/8113858/tecnologia-milagro-parkinson-temblor-esencial.html">CLICK AQUÍ</a></i></p>
+        <p class="ver-mas">PARA CONOCER MÁS SOBRE ESTE TEMA, HAGA <a class="enfasis" href="https://www.lavanguardia.com/vida/20220310/8113858/tecnologia-milagro-parkinson-temblor-esencial.html">CLICK AQUÍ</a></p>
     </div>
     
     <br>
@@ -105,7 +106,7 @@
     <div class="noticia_3">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/FJpM3OtKN5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    <h1 class="t_noticia_3">Científicos crean embriones humanos sintéticos</h1>
         <p class="p_noticia_3">Investigadores de Estados Unidos y Reino Unido lograron crearlos sin utilizar óvulos ni espermatozoides, ya que recurrieron a células madre.</p>
-        <p class="ver-mas"><i>PARA CONOCER MÁS SOBRE ESTE TEMA, HAGA <a class="enfasis" href="https://www.milenio.com/videos/ciencia-y-salud/nueva-terapia-de-tecnologia-genetica-contra-el-cancer">CLICK AQUÍ</a></i></p>
+        <p class="ver-mas">PARA CONOCER MÁS SOBRE ESTE TEMA, HAGA <a class="enfasis" href="https://www.forbes.com.mx/cientificos-crean-embriones-humanos-sinteticos-con-celulas-madre-sin-ovulos-ni-esperma/">CLICK AQUÍ</a></p>
     </div>
 
 </section>
@@ -120,8 +121,9 @@
         <li class="elementos"><a href="programacion.html">Programación</a></li>
         <li class="elementos"><a href="referencias.html">Referencias</a></li>
         <li class="elementos"><a href="contactanos.html">Contáctanos</a></li>
-        <li>&copy; Solo Ciencia. 2023</li>
-        <li><button class="cerrar-sesion">Cerrar sesión</button></li>
+        <li style="font-size: smaller;">&copy; Solo Ciencia. 2023</li>
+        <li><button class="cerrar-sesion" onclick="location.href='login.html'">Cerrar sesión</button>
+        </li>
       </ul>
     </div>
   </footer>
